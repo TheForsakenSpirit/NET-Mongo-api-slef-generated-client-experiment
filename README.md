@@ -17,4 +17,4 @@ Swagger Api documentation ready for experiment on http://localhost:5260/swagger
 [Code link](https://github.com/TheForsakenSpirit/NET-Mongo-api-slef-generated-client-experiment/blob/dd2de155840be0884aff4ae22f9753a17c5a241c/server/Controllers/UserController.cs#L35-L41)
 
 ### Auto generated TypeScript client with types, that represent api
-> dotnet run --project APIClientGenerator http://localhost:5260/swagger/v1/swagger.json client/intex.cs TypeScript
+> dotnet run --project APIClientGenerator http://localhost:5260/swagger/v1/swagger.json client/intex.ts TypeScript
