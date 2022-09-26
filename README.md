@@ -9,7 +9,7 @@ Before start, install [dotnet cli and sdk](https://learn.microsoft.com/uk-ua/dot
 ### API
 
 To run api execute 
-> dotnet run --project server \
+> dotnet run --project server
 
 Swagger Api documentation ready for experiment on http://localhost:5260/swagger
 
