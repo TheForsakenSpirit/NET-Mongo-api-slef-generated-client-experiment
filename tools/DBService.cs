@@ -10,7 +10,10 @@ public class DBService
 
     public DBService(IOptions<DBSettings> settings)
     {
-        var client = new MongoClient(settings.Value.ConnectionString);
+        MongoClientSettings mcs = MongoClientSettings.FromConnectionString(settings.Value.ConnectionString);
+        mcs.LinqProvider = MongoDB.Driver.Linq.LinqProvider.V3;
+
+        var client = new MongoClient(mcs);
         this.database = client.GetDatabase(settings.Value.DatabaseName);
     }
 }

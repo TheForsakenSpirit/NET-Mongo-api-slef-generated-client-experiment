@@ -15,13 +15,14 @@ public class ToDoController : ControllerBase
         this._serviceProvider = new DBServiceProvider<ToDo>(service);
     }
 
-    [HttpGet(Name="ToDo")]
+    [HttpGet(Name = "")]
     public IEnumerable<ToDo> Get()
     {
+        Console.WriteLine("Get");
         return _serviceProvider.Get();
     }
 
-    [HttpPost(Name="ToDo")]
+    [HttpPost(Name = "")]
     public ToDo Post(ToDo todo)
     {
         return _serviceProvider.Create(todo);

@@ -6,5 +6,12 @@ public class ModelBase
 {
 
     [BsonId]
-    private ObjectId? _id;
+    private ObjectId? id { get; set; } = null;
+
+    public ModelBase()
+    {
+        this.id = ObjectId.GenerateNewId();
+    }
+
+
 }

@@ -6,7 +6,7 @@ namespace capi.Model;
 public class User : ModelBase
 {
     [BsonElement("key")]
-    public string Key { get; set; } = "";
+    public string Key { get; set; } = new Guid().ToString();
 
     [BsonElement("name")]
     public string? Name { get; set; }

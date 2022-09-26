@@ -16,4 +16,7 @@ public class Notification : ModelBase
 
     [BsonElement("toDoKey")]
     public string? ToDoKey { get; set; }
+
+    [BsonElement("userKey")]
+    public string? UserKey { get; set; }
 }

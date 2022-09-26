@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<DBSettings>(
-    builder.Configuration.GetSection("DBSettings"));
+builder.Configuration.GetSection("DBSettings"));
 
 builder.Services.AddSingleton<DBService>();
 
@@ -20,6 +20,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
