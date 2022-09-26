@@ -25,7 +25,7 @@ public class UserController : ControllerBase
         return _serviceProvider.Get();
     }
 
-    [HttpGet("user/notification/{key}", Name = "UserById")]
+    [HttpGet("notification/{key}", Name = "UserById")]
     public async Task<IEnumerable<Notification>> GetNotifications(string key)
     {
         var notificationProvider = service.database.GetCollection<Notification>(typeof(Notification).Name);
